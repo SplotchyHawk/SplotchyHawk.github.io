@@ -1,0 +1,43 @@
+npm install firebase
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCWiQsCSb8NYUDPsIjGzdn5KIb3MZ_uatQ",
+  authDomain: "sebgodboutweb.firebaseapp.com",
+  projectId: "sebgodboutweb",
+  storageBucket: "sebgodboutweb.appspot.com",
+  messagingSenderId: "933974524853",
+  appId: "1:933974524853:web:e16c31498dab291cc98ffc",
+  measurementId: "G-N05165ZMPP"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+
+TO HOST:
+
+Go to directory where website code is in terminal
+
+firebase init, yes to ready to proceed, 
+use arrow keys to navigate to hosting option and press space,
+use existing project, press enter on the only option
+
+create file "public" in the directory and paste the files in it
+
+yes to use my public directory
+
+no to single-page app
+
+no to override existing index file
+
+firebase deploy
+
