@@ -97,6 +97,7 @@
 	height: 7.5%;
 	left: 0;
 	border-bottom: 3mm ridge #CFD5F7;
+	z-index: 1000;
 }
 
 	/* Links inside the navbar */

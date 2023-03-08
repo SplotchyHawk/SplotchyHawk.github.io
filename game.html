@@ -11,21 +11,154 @@
     <a href="art.html">Art</a>
     <a href="contact.html">Contact</a>
 </div>
+
+<head>
+    <style>
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+    
+        .box {
+          width: 600px;
+          height: 300px;
+          border: 1px solid black;
+          padding: 10px;
+          margin-bottom: 20px;
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          overflow: hidden;
+          transition: all 0.3s ease;
+        }
+    
+        .box img {
+          max-width: 100%;
+          height: auto;
+        }
+    
+        .box .arrow {
+          font-size: 20px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+    
+        .box .arrow-right {
+          transform: rotate(0deg);
+        }
+    
+        .box.expanded .arrow {
+          transform: rotate(180deg);
+        }
+    
+        .box.expanded .content {
+          display: block;
+        }
+    
+        .box .content {
+          width: 0;
+          display: none;
+          transition: all 0.3s ease;
+        }
+    
+        .box.expanded .content {
+          width: 100px;
+        }
+    
+        .box .content button {
+          display: block;
+          margin-top: 10px;
+        }
+    
+        .box .details {
+          margin-left: 10px;
+          flex: 1;
+        }
+    
+        .box .details h2 {
+          margin: 0 0 5px;
+          font-size: 16px;
+        }
+    
+        .box .details p {
+          margin: 0;
+          font-size: 14px;
+        }
+    
+        .box.expanded .details {
+          display: none;
+        }
+      </style>
+</head>
+
 <br>
 <br>
 <br>
 <br>
 <br>
 <body id="body">
-    <a href="Demo/index.html">
-        <button style="border-radius: 50px; background-color: blue; color: white; padding: 10px 20px;">Demo Game</button>
-    </a>
-    <a href="Maze/index.html">
-        <button style="border-radius: 50px; background-color: blue; color: white; padding: 10px 20px;">Maze Game</button>
-    </a>
-    <a href="Dungeon/index.html">
-        <button style="border-radius: 50px; background-color: blue; color: white; padding: 10px 20px;">Dungeon Game</button>
-    </a>
-</body>
+    
+  <!-- APP GAME-->
+    <div class="box">
+      <img src="Images/Western.png" alt="Image">
+      <div class="details">
+        <h2>App Game</h2>
+        <p>Description</p>
+      </div>
+      <div class="content">
+        <a href="Demo/index.html">
+            <button style="border-radius: 50px; background-color: rgb(20, 196, 14); color: white; padding: 10px 20px;">PLAY</button>
+        </a>
+      </div>
+      <div class="arrow arrow-right">&#9654;</div>
+    </div>
+
+    <!-- APP GAME-->
+      <div class="box">
+        <img src="Images/Western.png" alt="Image">
+        <div class="details">
+          <h2>App Game</h2>
+          <p>Description</p>
+        </div>
+        <div class="content">
+          <a href="Maze/index.html">
+              <button style="border-radius: 50px; background-color: rgb(20, 196, 14); color: white; padding: 10px 20px;">PLAY</button>
+          </a>
+        </div>
+        <div class="arrow arrow-right">&#9654;</div>
+      </div>
+
+    <!-- APP GAME-->
+      <div class="box">
+        <img src="Images/Western.png" alt="Image">
+        <div class="details">
+          <h2>App Game</h2>
+          <p>Description</p>
+        </div>
+        <div class="content">
+          <a href="Dungeon/index.html">
+              <button style="border-radius: 50px; background-color: rgb(20, 196, 14); color: white; padding: 10px 20px;">PLAY</button>
+          </a>
+        </div>
+        <div class="arrow arrow-right">&#9654;</div>
+      </div>
+  
+    <script>
+      const boxes = document.querySelectorAll('.box');
+  
+      boxes.forEach(box => {
+        const arrow = box.querySelector('.arrow');
+  
+        arrow.addEventListener('click', () => {
+          box.classList.toggle('expanded');
+        });
+      });
+    </script>
+
+    
+  </body>
 
 </html>
