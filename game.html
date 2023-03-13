@@ -91,6 +91,29 @@
         .box.expanded .details {
           display: none;
         }
+
+        .photo-box {
+          display: none; /* hide the box by default */
+          position: fixed;
+          top: 30%;
+          left: 50%;
+          transform: translateY(-50%, -50%);
+          width: 600px;
+          height: 400px;
+          background-color: #505050;
+          border: 1px solid #000000;
+          padding: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .photo-box img {
+          display: block;
+          width: 50%;
+          height: 50%;
+          object-fit: cover;
+          margin-bottom: 10px;
+          float: right;
+        }
       </style>
 </head>
 
@@ -100,7 +123,15 @@
 <br>
 <br>
 <body id="body">
-    
+
+  <div class="photo-box photo-box1">
+    <img src="Images/demo.png">
+    <img src="Images/demo.png">
+    <img src="Images/demo.png">
+    <img src="Images/demo.png">
+  </div>
+
+  <div>
   <!-- APP GAME-->
     <div class="box">
       <img src="Images/demo.png" alt="Image">
@@ -113,7 +144,14 @@
             <button style="border-radius: 50px; background-color: rgb(20, 196, 14); color: white; padding: 10px 20px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='lightgreen'" onmouseout="this.style.backgroundColor='green'">PLAY</button>
         </a>
       </div>
-      <div class="arrow arrow-right">&#9654;</div>
+      <div class="arrow arrow1">&#9654;</div>
+    </div>
+
+    <div class="photo-box photo-box2">
+      <img src="Images/Maze.png">
+      <img src="Images/Maze.png">
+      <img src="Images/Maze.png">
+      <img src="Images/Maze.png">
     </div>
 
     <!-- MAZE GAME-->
@@ -128,7 +166,14 @@
               <button style="border-radius: 50px; background-color: rgb(20, 196, 14); color: white; padding: 10px 20px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='lightgreen'" onmouseout="this.style.backgroundColor='green'">PLAY</button>
           </a>
         </div>
-        <div class="arrow arrow-right">&#9654;</div>
+        <div class="arrow arrow2">&#9654;</div>
+      </div>
+
+      <div class="photo-box photo-box3">
+        <img src="Images/Dungeon.png">
+        <img src="Images/Dungeon.png">
+        <img src="Images/Dungeon.png">
+        <img src="Images/Dungeon.png">
       </div>
 
     <!-- DUNGEON GAME-->
@@ -143,7 +188,14 @@
               <button style="border-radius: 50px; background-color: rgb(20, 196, 14); color: white; padding: 10px 20px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='lightgreen'" onmouseout="this.style.backgroundColor='green'">PLAY</button>
           </a>
         </div>
-        <div class="arrow arrow-right">&#9654;</div>
+        <div class="arrow arrow3">&#9654;</div>
+      </div>
+
+      <div class="photo-box photo-box4">
+        <img src="Images/Uber.png">
+        <img src="Images/Uber.png">
+        <img src="Images/Uber.png">
+        <img src="Images/Uber.png">
       </div>
 
       <!-- SuperOoberZoomer GAME-->
@@ -158,22 +210,31 @@
               <button style="border-radius: 50px; background-color: rgb(20, 196, 14); color: white; padding: 10px 20px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='lightgreen'" onmouseout="this.style.backgroundColor='green'">PLAY</button>
           </a>
         </div>
-        <div class="arrow arrow-right">&#9654;</div>
+        <div class="arrow arrow4">&#9654;</div>
       </div>
   
     <script>
       const boxes = document.querySelectorAll('.box');
-  
-      boxes.forEach(box => {
+      const photoBoxes = document.querySelectorAll('.photo-box');
+
+      boxes.forEach((box, index) => {
         const arrow = box.querySelector('.arrow');
-  
+
         arrow.addEventListener('click', () => {
+          boxes.forEach((otherBox, otherIndex) => {
+            if (otherIndex !== index && otherBox.classList.contains('expanded')) {
+              otherBox.classList.remove('expanded');
+              photoBoxes[otherIndex].style.display = 'none';
+            }
+          });
+
           box.classList.toggle('expanded');
+          photoBoxes[index].style.display = box.classList.contains('expanded') ? 'block' : 'none';
         });
       });
     </script>
 
-    
+    </div>
   </body>
 
 </html>
