@@ -1,0 +1,16 @@
+# Ignore Unity build directories
+/Demo/
+/Dungeon/
+/Images/
+/Maze/
+/SuperOoberZoomer/
+
+# Ignore image thumbnails or cache files
+/Images/thumbnails/
+/Images/cache/
+
+# Ignore compiled CSS files
+*.css.map
+
+# Ignore the MP4 file
+SoccerFilm1.mp4
