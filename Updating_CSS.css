@@ -1,0 +1,445 @@
+/* Home Page Containers -----------------------------------------------------*/
+.speech-bubble {
+    position: relative;
+    background-color: white;
+    border-radius: 1000px;
+    padding: 10px;
+    max-width: 50px;
+    margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    border: solid transparent;
+    border-right-color: white; /* Point to the left */
+    border-width: 20px;
+    margin-top: -20px;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+}
+
+.double-section {
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 500px;
+    background: url('Images/green-background.jpg') center/cover no-repeat; /* Add the path to your image */
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 100);
+}
+
+.title-content {
+    flex: 1;
+    margin-bottom: 10%;
+}
+
+.title-image img {
+    border: 2px solid lightblue;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.contact-button:hover {
+    background-color: #2980b9;
+}
+
+.contact-button2 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #3498db;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.contact-button2:hover {
+    background-color: #83b8db;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+#body {
+    background-color: #ffffff;
+}
+
+.second-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.second-section-text{
+    border: 2px solid #3498db;
+
+}
+
+.custom-section-container {
+    display: flex;
+    align-items: center;
+    max-width: 2000px;
+}
+
+.custom-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    
+    position: relative;
+    padding: 10px 20px;
+    background-color: #77a877;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    
+    border-radius: 10px; /* Adjust the value for the desired amount of curvature */
+}
+
+.custom-buttons button {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.custom-buttons::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px; /* Adjust this value based on your design */
+    border-width: 20px 0 20px 20px;
+    border-style: solid;
+    border-color: transparent transparent transparent #77a877;
+  }
+
+.custom-section {
+    display: none;
+    text-align: left;
+}
+
+.custom-section.active {
+    display: flex;
+}
+
+.custom-section div {
+    flex-grow: 1;
+}
+
+.blue-back{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    width: 340px;
+    height: 500px;
+    border-radius: 10px;
+    background: url('Images/blue-background.jpg') center/cover no-repeat; /* Add the path to your image */
+    border: 2px solid #b2cfe2
+}
+
+.skill {
+    background-color: #77a877; 
+    padding: 5px 10px;
+    margin-bottom: 4px; /* Space between each skill */
+    display: inline-block;
+    border-radius: 10px; /* Rounded corners for each skill */
+}
+
+.third-section {
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 500px;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    position: relative;
+}
+
+.third-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Images/green-background.jpg') center/cover no-repeat;
+    transform: scaleY(-1); /* Flip on the y-axis */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+.experience {
+    text-align: center;
+    position: relative;
+    overflow: auto;
+    width: 300px;
+    height: 90%;
+    min-width: 300px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    position: relative;
+    color: black;
+  }
+
+  .experience::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('Images/blue-background.jpg') center/cover no-repeat; /* Add the path to your image */
+    opacity: 0.3; /* Set the desired opacity (0.5 for 50%) */
+    z-index: -1; /* Place the overlay behind the content */
+    border-radius: 10px; /* Match the border radius of the container */
+  }
+
+  .experienceNEW {
+    text-align: center;
+    position: relative;
+    overflow: auto;
+    width: 300px;
+    height: 90%;
+    min-width: 300px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    position: relative;
+    color: black;
+  }
+
+  .experienceNEW::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('Images/blue-background.jpg') center/cover no-repeat;
+    opacity: 0.5; /* Set the desired opacity (0.5 for 50%) */
+    z-index: -1; /* Place the overlay behind the content */
+    border-radius: 10px; /* Match the border radius of the container */
+  }
+
+/* News Page Containers -----------------------------------------------------*/
+
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: #ecf0f1; /* Set a background color for the page */
+    background-color: #80acff;
+}
+
+.newslist {
+    border: 2px solid black;
+    overflow: auto;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+    width: 80vw; 
+    min-width: 500px;
+    background-color: #ffffff;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    position: relative;
+}
+
+.news img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* This property maintains the aspect ratio while covering the entire container */
+}
+
+/* Adjust the .news containers to have a fixed height */
+.news {
+    border: 2px solid rgb(32, 185, 65);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    text-align: center;
+    overflow: hidden; /* Hide any content that overflows the container */
+    width: 800px;
+    min-width: 200px;
+    height: 400px; /* Adjust the height as needed */
+    margin: 20px;
+    border-radius: 10px;
+    position: relative;
+    color: black;
+}
+
+.news::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('Images/green-mail.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .5;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+/* Game Section code -----------------------------------------------------*/
+
+.game-box {
+    display: flex;
+    background-color: rgba(0, 128, 0, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    color: white;
+    margin-bottom: 20px;
+}
+
+.game-photo {
+    flex: 1;
+    padding: 20px;
+}
+
+.game-photo img {
+    border: 2px solid rgb(6, 109, 28);
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.info {
+    flex: 2;
+    padding: 20px;
+}
+
+.button {
+    padding: 10px;
+    background-color: white;
+    color: green;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 1);
+    background-color: white;
+    color: black;
+}
+
+.side-container {
+    margin-top: 50px;
+    position: fixed;
+    top: 0;
+    right: -450px; /* initially hide the container off-screen */
+    width: 30%; /* Set max width to 50% of the page */
+    max-width: 400px; /* Set a specific maximum width if needed */
+    height: 100%;
+    background-color: #83d1f5;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: right 0.3s;
+}
+
+.side-container.show {
+    right: 0;
+}
+
+.photo-grid {
+    border-radius: 8px;
+    background-color: #000000;
+    border: 5px solid rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 150px; /* Set a fixed height for the photo items */
+}
+
+.photo-item img {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 8px;
+}
+
+.play-button {
+    margin-left: 100px;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+}
+
+.play-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Navbar code -----------------------------------------------------*/
+.navbar {
+    overflow: hidden;
+    background-color: #23a765;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    height: 7.5%;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 25px 16px;
+    text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    border-top: 2mm ridge rgb(61, 173, 130);
+    background: #3498db;
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="Updating_CSS.css">
+<html>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="newsNEW.html">News</a>
+    <a href="gameNEW.html">Games</a>
+    <a href="soccer.html">Sports</a>
+    <a href="code.html">Code</a>
+    <a href="art.html">Art</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* to hide horizontal scrollbar */
+            background-image: url('Images/blue-background.jpg');
+            background-size: cover; /* Adjust as needed */
+            background-position: center; /* Adjust as needed */
+            background-attachment: fixed; /* Fixed background */
+        }
+  </style>
+</head>
+
+<body>
+
+  <div class="game-box" data-container-id="container1" style="margin-top: 80px;">
+      <div class="game-photo">
+          <img src="Images/Dungeon.png" alt="Your Photo">
+      </div>
+      <div class="info">
+        <h1>DUNGEON CRAWLER</h1>
+          <p>Defeat different enemy types by dodging and shooting. Can you reach the boss at the end? <br>
+            It is said to have two phases!</p>
+          <!-- Use href="javascript:void(0)" to prevent scrolling -->
+          <a href="javascript:void(0)" class="button" onclick="toggleContainer('container1')">Learn More<br>and Play</a>
+      </div>
+  </div>
+  
+  <div class="game-box" data-container-id="container2">
+      <div class="game-photo">
+          <img src="Images/Uber.png" alt="Your Photo">
+      </div>
+      <div class="info">
+        <h1>SUPER OOBER ZOOMER</h1>
+          <p>How many wacky characters can you successfully pickup and drop off before the timer runs <br>
+            out in this chaotic uber simulator!</p>
+          <!-- Use href="javascript:void(0)" to prevent scrolling -->
+          <a href="javascript:void(0)" class="button" onclick="toggleContainer('container2')">Learn More<br>and Play</a>
+      </div>
+  </div>
+  
+  <div class="game-box" data-container-id="container3">
+      <div class="game-photo">
+          <img src="Images/demo.png" alt="Your Photo">
+      </div>
+      <div class="info">
+        <h1>BLOCK BLAST</h1>
+          <p>Dodge bricks as they relentlessly increase in speed. Rack up your score and see how far you <br>
+            can get!</p>
+          <!-- Use href="javascript:void(0)" to prevent scrolling -->
+          <a href="javascript:void(0)" class="button" onclick="toggleContainer('container3')">Learn More<br>and Play</a>
+      </div>
+  </div>
+  
+  <div class="game-box" data-container-id="container4">
+      <div class="game-photo">
+          <img src="Images/Maze.png" alt="Your Photo">
+      </div>
+      <div class="info">
+        <h1>MAZE GAME</h1>
+          <p>Zoom around the maze and collect keys as fast as you can to navigate your way to the exit.</p>
+          <!-- Use href="javascript:void(0)" to prevent scrolling -->
+          <a href="javascript:void(0)" class="button" onclick="toggleContainer('container4')">Learn More<br>and Play</a>
+      </div>
+  </div>
+  
+
+
+<!-- Side Containers----------------------------------------------------->
+  <div class="side-container" id="container1">
+    <h1>DUNGEON CRAWLER</h1>
+    <br>
+
+      <!-- Container for photos and play button -->
+    <div class="photo-grid">
+        <div class="photo-item">
+            <img src="Images/Dungeon1.png" alt="Photo 1">
+        </div>
+        <div class="photo-item">
+            <img src="Images/Dungeon2.png" alt="Photo 2">
+        </div>
+        <div class="photo-item">
+            <img src="Images/Dungeon3.png" alt="Photo 3">
+        </div>
+        <div class="photo-item">
+            <img src="Images/Dungeon4.png" alt="Photo 4">
+        </div>
+    </div>
+
+    <a href="Dungeon/index.html">
+    <!-- Play button -->
+      <button class="play-button"><h1>Play</h1></button>
+    </a>
+
+  </div>
+  
+  <div class="side-container" id="container2">
+    <h1>SUPER OOBER ZOOMER</h1>
+    <br>
+
+        <!-- Container for photos and play button -->
+    <div class="photo-grid">
+      <div class="photo-item">
+          <img src="Images/Uber1.png" alt="Photo 1">
+      </div>
+      <div class="photo-item">
+          <img src="Images/Uber2.png" alt="Photo 2">
+      </div>
+      <div class="photo-item">
+          <img src="Images/Uber3.png" alt="Photo 3">
+      </div>
+      <div class="photo-item">
+          <img src="Images/Uber4.png" alt="Photo 4">
+      </div>
+  </div>
+
+  <a href="SuperOoberZoomer/index.html">
+  <!-- Play button -->
+    <button class="play-button"><h1>Play</h1></button>
+  </a>
+
+  </div>
+  
+  <div class="side-container" id="container3">
+    <h1>BLOCK BLAST</h1>
+    <br>
+
+        <!-- Container for photos and play button -->
+    <div class="photo-grid">
+      <div class="photo-item">
+          <img src="Images/demo1.png" alt="Photo 1">
+      </div>
+      <div class="photo-item">
+          <img src="Images/demo2.png" alt="Photo 2">
+      </div>
+      <div class="photo-item">
+          <img src="Images/demo3.png" alt="Photo 3">
+      </div>
+      <div class="photo-item">
+          <img src="Images/demo4.png" alt="Photo 4">
+      </div>
+  </div>
+
+  <a href="Demo/index.html">
+  <!-- Play button -->
+    <button class="play-button"><h1>Play</h1></button>
+  </a>
+
+  </div>
+  
+  <div class="side-container" id="container4">
+    <h1>MAZE GAME</h1>
+    <br>
+
+        <!-- Container for photos and play button -->
+    <div class="photo-grid">
+      <div class="photo-item">
+          <img src="Images/Maze1.png" alt="Photo 1">
+      </div>
+      <div class="photo-item">
+          <img src="Images/Maze2.png" alt="Photo 2">
+      </div>
+      <div class="photo-item">
+          <img src="Images/Maze3.png" alt="Photo 3">
+      </div>
+      <div class="photo-item">
+          <img src="Images/Maze4.png" alt="Photo 4">
+      </div>
+  </div>
+
+  <a href="Maze/index.html">
+  <!-- Play button -->
+    <button class="play-button"><h1>Play</h1></button>
+  </a>
+
+  </div>
+  
+  <script>
+      function toggleContainer(containerId) {
+          // Get the clicked container
+          var container = document.getElementById(containerId);
+          
+          // Get all side containers
+          var allContainers = document.querySelectorAll('.side-container');
+  
+          // Loop through all side containers and hide them
+          allContainers.forEach(function (currentContainer) {
+              if (currentContainer.id !== containerId) {
+                  currentContainer.classList.remove('show');
+              }
+          });
+  
+          // Toggle the clicked container
+          container.classList.toggle('show');
+      }
+  </script>
+  
+  </body>
+
+
+</body>
+</html>
