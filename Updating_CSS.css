@@ -302,6 +302,17 @@
 
 /* Game Section code -----------------------------------------------------*/
 
+.game-section{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* to hide horizontal scrollbar */
+    background-image: url('Pics/blue-background.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+    background-attachment: fixed; /* Fixed background */
+}
+
 .game-box {
     display: flex;
     background-color: rgba(0, 128, 0, 0.6);
