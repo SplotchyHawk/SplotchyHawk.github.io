@@ -27,7 +27,7 @@
     justify-content: space-between;
     width: 100%;
     min-width: 500px;
-    background: url('Images/green-background.jpg') center/cover no-repeat; /* Add the path to your image */
+    background: url('Pics/green-background.jpg') center/cover no-repeat; /* Add the path to your image */
     color: rgb(255, 255, 255);
     box-shadow: 0 0 10px rgba(0, 0, 0, 100);
 }
