@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="my_css_file.css">
-<html>
 
 <html lang="en">
 <head>
@@ -37,11 +36,17 @@
     }
 
     input[type="range"] {
-      width: 100%;
-      position: absolute; /* Set scrollbar position to absolute */
-      bottom: 100px; /* Raise the scrollbar by 100px */
-      z-index: 2; /* Ensure the scrollbar is above the wheel */
-    }
+  width: calc(100% - 20px); /* Adjusted width to accommodate the container padding */
+  position: absolute;
+  bottom: 100px;
+  z-index: 2;
+  appearance: none; /* Remove default styles */
+  outline: none; /* Remove default focus styles */
+  height: 20px; /* Set the height of the scrollbar */
+  background-color: rgb(92, 206, 92); /* Set the background color to green */
+  border-radius: 10px; /* Add rounded edges */
+  padding: 5px; /* Add padding to the scrollbar */
+}
 
     .navbar {
       overflow: hidden;
@@ -91,7 +96,7 @@
   <div class="wheel" id="wheel">
     <!-- Add images dynamically using JavaScript -->
   </div>
-  <input type="range" min="0" max="360" value="0" id="rotationRange">
+      <input type="range" min="0" max="360" value="0" id="rotationRange">
 </div>
 
 <script>
