@@ -3,65 +3,128 @@
 <html>
 
 <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="newsNEW.html">News</a>
-    <a href="gameNEW.html">Games</a>
-    <a href="code.html">Code</a>
-    <a href="art.html">Art</a>
-    <a href="soccer.html">Sports</a>
-    <a href="contact.html">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="newsNEW.html">News</a>
+  <a href="gameNEW.html">Games</a>
+  <a href="code.html">Code</a>
+  <a href="art.html">Art</a>
+  <a href="soccer.html">Sports</a>
+  <a href="contact.html">Contact</a>
 </div>
 
-  <head>
-    <style>
-      /* Set the background color to light blue */
-      body {
-        background-color: #343434;
-      }
+<head>
+  <style>
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      /* Center the content on the page */
-      .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
+    body {
+      height: 100vh;
+      background: linear-gradient(to bottom right, #20a11b, #33b4db, #2806e7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      /* Add some padding to the content */
-      .content {
-        padding: 20px;
-        text-align: center;
-      }
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 2.5rem;
+    }
 
-      /* Style the headings */
-      h1, h2, h3 {
-        color: white;
-      }
+    .item a {
+      text-decoration: none;
+      width: 4.8rem;
+      height: 4.8rem;
+      background-color: #f0f9fe;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      border: 3px solid #f0f9fe;
+      overflow: hidden;
+    }
 
-      /* Style the links */
-      a {
-        color: #0077cc; /* default link color */
-      }
+    .item a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-color);
+      z-index: 0;
+      scale: 1 0;
+      transform-origin: bottom;
+      transition: scale 0.5s ease;
+    }
 
-      a:hover {
-        color: #0055aa; /* darker link color on hover */
-      }
-</style>
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="content" style="background-color: #474747; padding: 10px;">
-        <h1>Sebastien Godbout</h1>
-        <h2>Software Developer</h2>
-        <h3>Contact Information</h3>
-        <p>Email: <a href="mailto:sebgodbout22@gmail.com">sebgodbout22@gmail.com</a></p>
-        <p><u>Socials</u><br><br>
-          <a href="https://github.com/SplotchyHawk">Github</a> <br>
-          <a href="https://www.linkedin.com/in/sebastien-godbout-6240b8245/">LinkedIn</a> <br>
-          <a href="https://www.instagram.com/sebgodbout/?hl=en">Instagram</a> <br>        
-        </p>
-      </div>
-    </div>
-  </body>
+    .item:hover a::before {
+      scale: 1 1;
+    }
+
+    .icon {
+      font-size: 2rem;
+      color: hsl(203, 92%, 8%);
+      transition: 0.5s ease;
+      z-index: 2;
+    }
+
+    .item a:hover .icon {
+      color: #fff;
+      transform: rotateY(360deg);
+    }
+
+    .item:nth-child(1) {
+      --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
+    }
+
+    .item:nth-child(2) {
+      --bg-color: #0077b5;
+    }
+
+    .item:nth-child(3) {
+      --bg-color: #004F9F;
+    }
+
+    .item:nth-child(4) {
+      --bg-color: #6e5494;
+    }
+  </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body> <!-- fa-youtube for the future -->
+  <ul>
+    <li class="item">
+      <a href="https://www.instagram.com/sebgodbout/?hl=en">
+        <i class="fa-brands fa-instagram icon"></i>
+      </a>
+    </li>
+    <li class="item">
+      <a href="https://www.linkedin.com/in/sebastien-godbout-6240b8245/">
+        <i class="fa-brands fa-linkedin icon"></i>
+      </a>
+    </li>
+    <li class="item">
+      <a href="mailto:sebgodbout22@gmail.com">
+        <i class="fa-solid fa-envelope icon"></i> 
+      </a>
+    </li>
+    <li class="item">
+      <a href="https://github.com/SplotchyHawk">
+        <i class="fa-brands fa-github icon"></i>
+      </a>
+    </li>
+  </ul>
+</body>
+
 </html>
