@@ -1,90 +1,211 @@
 <!DOCTYPE html>
-<link rel="stylesheet" type="text/css" href="my_css_file.css" href="Updating_CSS.css">
+<link rel="stylesheet" type="text/css" href="Updating_CSS.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
 
 <div class="navbar">
     <a href="index.html">Home</a>
-    <a href="news.html">News</a>
-    <a href="soccer.html">Sports</a>
+    <a href="newsNEW.html">News</a>
+    <a href="gameNEW.html">Games</a>
     <a href="code.html">Code</a>
-    <a href="game.html">Games</a>
     <a href="art.html">Art</a>
+    <a href="soccer.html">Sports</a>
     <a href="contact.html">Contact</a>
 </div>
 
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title> SEB'S WEBSITE </title>
-    </head>
-    <body id="body">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> SEB'S WEBSITE </title>
 
-    <!--First section-->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div style="text-align:center">
+    <link rel="stylesheet" type="text/css" href="Updating_CSS.css">
+
+</head>
+
+<body id="body">
+
+<br><br><br>   
+<!--First section-->
+<div class="double-section" style="width: 100%;">
+    <div class="title-image">
+        <img src="Pics/Headshot.jpeg" alt="IMAGE_ALT_TEXT" style="width: 200px; height: 400px;">
+    </div>
+    <div class="title-content" style="margin-left: 5%; min-width: 500px; margin-top: 50px;">
+        <br><div class="speech-bubble"><h1 style="color:#2980b9">HI!</h1></div>
+        <h2>My Name is Sebastien Godbout</h2>
+        <h3>I am a Software and Game Developer</h3>
+        <a href="mailto:sebgodbout22@gmail.com?subject=Contact%20Me" class="contact-button">Contact Me</a>
+        <a href="SebastienG_Resume.pdf" download="SebastienG_Resume.pdf" class="contact-button2">Download Resume</a>
+    </div>
+</div>
+    
+<script>
+    function downloadResume() {
+        // Replace 'path/to/your/resume.pdf' with the actual path to your resume file
+        var resumePath = 'SebastienGodboutResume.pdf';
+
+        // Create a temporary link element
+        var link = document.createElement('a');
+        link.href = resumePath;
+        link.download = 'Sebastien_Godbout_Resume.pdf';
+
+        // Append the link to the document
+        document.body.appendChild(link);
+
+        // Trigger a click on the link to start the download
+        link.click();
+
+        // Remove the link from the document
+        document.body.removeChild(link);
+    }
+</script>
+
+<div class="buffer"></div>
+
+<br><br><br>
+<!--Second Section-->
+<div class="custom-section-container second-section">
+    <div class="custom-buttons">
+        <button class="contact-button" style="border-color: #77a877;" onclick="showSection('custom-section1', 'button1')">Education</button>
+        <button class="contact-button" style="border-color: #77a877;" onclick="showSection('custom-section2', 'button2')">Skills</button>
+        <button class="contact-button" style="border-color: #77a877;" onclick="showSection('custom-section3', 'button3')">Goals</button>
+    </div>
+
+    <!--Education Section-->
+    <div id="custom-section1" class="custom-section active blue-back-holding" >
+        <div class="blue-back">
+            <div style="padding: 10px; margin-top: 25%;"><div class="skill"><p>
+                <h2><b>WESTERN UNIVERSITY,</b><div style="color: #2980b9;"> London, Ontario<br>Sept/2018 - June/2022</div></h2>
+                <h3>Graduated with:<br></h3>
+                <h4> Honors Specialization in Computer Science (Bachelors)<br><br>
+                     + Minor in Game Development
+                </h4>
+            </p></div></div>
+        </div>
         <div class="title-image">
-            <img src="Images/Headshot.jpeg" alt="IMAGE_ALT_TEXT" style="width: 200px; height: 400px;">
+            <img src="Pics/Western.png" alt="IMAGE_ALT_TEXT" class="desc-img" style="width: 400px; height: 500px; border: 5px solid #77a877; box-shadow: 0 0 10px rgba(0, 0, 0, 1);">
         </div>
-        <div class="title-content">
-            <h1>Sebastien Godbout</a></h1>
-        </div>
-    </div>
-    
-    <div class="container2" style="height: 500px;">
-        <div class="box">
-          <h2>Biography</h2>
-            <p>
-            My name is Sebastien Godbout, I am 23 years old and was born in Vancouver, Canada.
-            I have recently graduated from Western University of Ontario. I completed an
-            Honors Specialization in Computer Science and a Minor in Game Development. Using the 
-            knowledge I have gained through my education, I have created this website utilizing visual
-            studios. My goal is to show my coding capabilities, creative personality, and determination to future
-            employers. 
-            <br><br>
-            I wish to specialize in a certain subject instead of having a wide
-            variety of knowledge about the software development industry. I am an attentive, ambitious,
-            and resourcful individual seeking to create lasting business relationships. I hope to
-            solidify these connections with the skills I have aquired from my education and individual
-            experience. 
-            <br><br>
-            Python is one of my earliest languages. It acted as the introduction to my bachelor's
-            degree. As I progressed through classes, they adopted more in depth languages such as Java,
-            C++, and C. These were the most popular languages throughout my education. I created anything
-            from TikTakTo games against AI, to data management algorithms made to simplify and organise
-            output from external API. I also delved into SQL databases where I managed customers, vehicles,
-            and IDs pertaining to different available bus trips. This incorporated HTML, PHP, and
-            CSS in order to create an interface that allows users to add themselves to the SQL databases
-            and book or cancel trips. Also, my gaming minor made me work with C# within Unity.
-            You can find some of my personal videogames and thier game mechanic descriptions in the Gaming 
-            section of this website. On top of this wide variety of education, I have a sports background
-            that stems from a young age. This includes soccer, rugby, and taekwondo, which are explored
-            more within the sports tab.
-            </p>
-        </div>
-        <img src="Images/grad.jpeg" alt="Your Image" style="width: 500px;">
     </div>
 
-    <div>
-        <center>
-            <h1>Skills</h1>
-            <h3>Java • C++ • C# • C • Python • Unity Game Engine • Art • PHP • HTML • CSS • Linux Systems • TCP/IP Networks • SQL Databases • Bird 
-            Photography • Soccer • Rugby • Video Game Creator</h3>
-        </center>
-    </div>
-    
-    <div style="display: flex; justify-content: center;">
-        <div style="display: flex; align-items: center; margin-right: 10px;">
-            <h2 style="margin: 0; background-color: #474747; padding: 20px; padding-right: 400px; box-sizing: border-box; color: rgb(255, 255, 255);">My Resume</h2>
-            <button onclick="window.location.href='https://github.com/SplotchyHawk/SplotchyHawk.github.io/raw/main/SebastienGodboutResume.pdf'" style="background-color: green; color: white; border: 1px solid black; font-size: 16px; height: 69px; width: 200px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='lightgreen'" onmouseout="this.style.backgroundColor='green'">DOWNLOAD</button>
+    <!--Skills Section-->
+    <div id="custom-section2" class="custom-section blue-back-holding" >
+        <div class="blue-back">
+            <div style=" margin-top: 20px; margin-left: 5px;">
+                <div class="skill">C# - Advanced</div>
+                <div class="skill">Unity - Advanced</div><br>
+                <div class="skill">Java - Advanced</div>
+                <div class="skill">Github - Advanced</div><br>
+                <div class="skill">Python - Intermediate</div><br>
+                <div class="skill">C++ - Intermediate</div><br>
+                <div class="skill">CSS - Intermediate</div><br>
+                <div class="skill">HTML - Intermediate</div><br>
+                <div class="skill">Linux Systems - Intermediate</div><br>
+                <div class="skill">Unreal Engine 5 - Intermediate</div><br>
+                <div class="skill">Med Access - Intermediate</div><br>
+                <div class="skill">OceanMD - Intermediate</div><br>
+                <div class="skill">SQL Databases - Junior</div><br>
+                <div class="skill">JavaScript - Junior</div><br>
+                <div class="skill">TCP/IP - Junior</div><br>
+                <div class="skill">C - Junior</div><br>
+            </div>
+        </div>
+        <div class="title-image" style= "margin-left: 0;">
+            <img src="Pics/grad.jpeg" alt="IMAGE_ALT_TEXT" class="desc-img" style="width: 400px; height: 500px; border: 5px solid #77a877; box-shadow: 0 0 10px rgba(0, 0, 0, 1);">
         </div>
     </div>
-    </body>
-</html>
+
+    <!--Goals Section-->
+    <div id="custom-section3" class="custom-section blue-back-holding">
+        <div class="blue-back">
+            <div style="padding-left: 4px; padding-top: 10px;"><div class="skill"><p>As a programmer with a degree in Computer Science, my goal is to continuously push the boundaries of software development by building efficient, scalable, and innovative solutions. I am passionate about designing systems that not only solve complex problems but also enhance user experience and maintainability. Whether it’s developing robust back-end architectures, crafting engaging front-end experiences, or exploring cutting-edge technologies like AI, game development, or procedural generation, I strive to keep learning and improving. My long-term vision is to contribute to projects that make a meaningful impact—whether in gaming, automation, or emerging tech—while honing my skills and collaborating with like-minded developers.</p></div></div>
+        </div>
+        <div class="title-image" style= "margin-left: 0;">
+            <img src="Pics/goals.jpg" alt="IMAGE_ALT_TEXT" class="desc-img" style="width: 400px; height: 500px; border: 5px solid #77a877; box-shadow: 0 0 10px rgba(0, 0, 0, 1);">
+        </div>
+    </div>
+</div>
+
+<script>
+    function showSection(sectionId, buttonId) {
+        // Hide all sections
+        var sections = document.querySelectorAll('.custom-section');
+        sections.forEach(function (section) {
+            section.classList.remove('active');
+        });
+
+        // Show the clicked section
+        var activeSection = document.getElementById(sectionId);
+        activeSection.classList.add('active');
+
+    }
+</script>
+
+<div class="buffer"></div>
+
+<br><br>
+<!--Third Section (Experience)-->
+<div class="third-section">
+    <div style="overflow: auto; min-width: 800px; display: flex; width: 100%; display: flex; width: 90%; margin-left: 5%; height: 94%; margin-top: 14px;">
+
+        <div class="experienceNEW" style="margin-left: 60px;">
+            <h2>Junior Software Developer</h2>
+            <h3>DOLPHIN ENTERPRISES</h3>
+            <h3 style="color: #2980b9;">850 W Hastings St, Vancouver, BC</h3>
+            <h3 style="color: #2980b9;">June/24 - Jan/25</h3>
+            <h4 style="margin: 10px;">
+                Full Stack development utilizing a VB.Net, C#, SQL, Crystal Reports, 
+                Janus Winforms, Azure and TortoiseSVN pipeline. Maintained MIC Manager, a financial platform managing over $2 billion for private lending clients.
+            </h4>
+        </div>
+
+        <div class="experienceNEW">
+            <h2>Virtual Production Assistant</h2>
+            <h3>SHORELINE STUDIO</h3>
+            <h3 style="color: #2980b9;">1425 Charles St, Vancouver, BC</h3>
+            <h3 style="color: #2980b9;">May/23 - April/24</h3>
+            <h4 style="margin: 10px;">
+                Aiding as a Virtual Production Assistant with the
+                creation of their new virtual production studio. Incorporates UE5
+                virtual environments, Black Magic hardware/software, Ultimatte
+                software, and Bliss Nodal Offset to output realistic environments
+                surrounding the actor. Used for livestreaming and film making.
+            </h4>
+        </div>
+
+        <div class="experienceNEW">
+            <h2>Independent Contractor</h2>
+            <h3>Group of Clientele</h3>
+            <h3 style="color: #2980b9;">Remote</h3>
+            <h3 style="color: #2980b9;">April/23 - Present</h3>
+            <h4 style="margin: 10px;">
+                Providing IT support and developing eForm
+                software for healthcare providers utilizing online platforms such as
+                OceanMD, Med Access, and other EMRs
+            </h4>
+        </div>
+
+        <div class="experience">
+            <h2>Labor Specialist</h2>
+            <h3>VIOCITY</h3>
+            <h3 style="color: #2980b9;">#202 15388 24th Ave, Surrey, BC</h3>
+            <h3 style="color: #2980b9;">May/21 - Aug/21</h3>
+            <h4 style="margin: 10px;">
+                Labor force company including construction,
+                industrial, warehouse work, and furniture moving.
+            </h4>
+        </div>
+
+        <div class="experience">
+            <h2>Moving Specialist</h2>
+            <h3>YOU MOVE ME</h3>
+            <h3 style="color: #2980b9;">108-8331 Eastlake Dr. Burnaby, BC</h3>
+            <h3 style="color: #2980b9;">May/20 - Sept/20</h3>
+            <h4 style="margin: 10px;">
+                Moving furnishings to and from homes and offices.
+            </h4>
+        </div>
+    </div>
+</div>
 
 
 

@@ -149,7 +149,7 @@
 
 .blue-back{
     box-shadow: 0 0 10px rgba(0, 0, 0, .7);
-    width: 340px;
+    width: 700px;
     height: 500px;
     border-radius: 10px;
     background: url('Pics/blue-background.jpg') center/cover no-repeat; /* Add the path to your image */
@@ -253,6 +253,11 @@
         min-width: 850px;
     }
 
+    .buffer {
+        display: none; 
+      }
+      
+
 
 
 
@@ -267,6 +272,11 @@
       margin: 0;
       padding: 0;
     }
+
+    .buffer {
+        display: block;
+        height: 40px; 
+      }
   
     .double-section {
       width: 100%;
@@ -287,7 +297,6 @@
     }
   
     .title-image img {
-        align-self: ;
         width: 200px;
         height: 400px;
     }
@@ -308,7 +317,7 @@
     }
   
     .custom-section-container {
-      transform: scale(0.75);
+      transform: scale(0.6);
       transform-origin: top center;
       margin-bottom: 30px;
       margin-top: -200px;
