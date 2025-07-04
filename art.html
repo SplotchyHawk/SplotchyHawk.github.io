@@ -2,17 +2,28 @@
 <link rel="stylesheet" type="text/css" href="my_css_file.css">
 
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3D Circular Wheel</title>
   <style>
+    html,
+    body {
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      touch-action: pan-y;
+      /* Prevent horizontal touch scrolling */
+    }
+
     .container {
       perspective: 1000px;
       margin: 50px auto;
-      width: 400px; /* Increased container width to accommodate larger images */
-      text-align: center; /* Center align the container */
-      position: relative; /* Set container position to relative */
+      width: 90vw;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
     }
 
     .wheel {
@@ -21,31 +32,31 @@
       transform-style: preserve-3d;
       transition: transform 0.5s;
       display: flex;
-      justify-content: center; /* Center the wheel horizontally */
-      align-items: center; /* Center the wheel vertically */
-      position: relative; /* Set wheel position to relative */
-      z-index: 1; /* Ensure the wheel is above the scrollbar */
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
     }
 
     .wheel img {
       position: absolute;
-      width: 150px; /* Increased image width */
-      height: 150px; /* Increased image height */
+      width: 120px;
+      height: 120px;
       object-fit: cover;
-      border-radius: 50%; /* Make the images circular */
+      border-radius: 50%;
     }
 
     input[type="range"] {
-      width: calc(100% - 20px); /* Adjusted width to accommodate the container padding */
+      width: 90%;
       position: absolute;
       bottom: 100px;
       z-index: 2;
-      appearance: none; /* Remove default styles */
-      outline: none; /* Remove default focus styles */
-      height: 20px; /* Set the height of the scrollbar */
-      background-color: rgb(92, 206, 92); /* Set the background color to green */
-      border-radius: 10px; /* Add rounded edges */
-      padding: 5px; /* Add padding to the scrollbar */
+      appearance: none;
+      outline: none;
+      height: 20px;
+      background-color: rgb(92, 206, 92);
+      border-radius: 10px;
+      padding: 5px;
     }
 
     .navbar {
@@ -58,7 +69,6 @@
       left: 0;
       z-index: 1000;
       border-bottom: 2px solid rgb(255, 255, 255);
-      opacity: 1; /* Set navbar opacity to 100% */
     }
 
     /* Links inside the navbar */
@@ -70,6 +80,8 @@
       padding: 25px 16px;
       text-decoration: none;
       font-family: 'Times New Roman', Times, serif, sans-serif;
+      white-space: nowrap;
+      /* prevents links from breaking */
     }
 
     /* Change background on mouse-over */
@@ -78,56 +90,89 @@
       background: #3498db;
       color: rgb(255, 255, 255);
     }
+
+    /* Responsive styling for small screens */
+    @media (max-width: 600px) {
+
+      .navbar {
+        height: auto;
+      }
+
+      .navbar a {
+        padding: 12px 8px;
+        font-size: 14px;
+        float: none;
+        display: inline-block;
+        white-space: normal;
+      }
+
+      .wheel img {
+        width: 120px;
+        height: 120px;
+      }
+
+      input[type="range"] {
+        bottom: 60px;
+        height: 16px;
+      }
+
+      .wheel {
+        height: 250px;
+      }
+
+    }
   </style>
 </head>
-<body style="background-image: url('Pics/blue-gradient.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
 
-<div class="navbar">
-  <a href="index.html">Home</a>
-  <a href="newsNEW.html">News</a>
-  <a href="gameNEW.html">Games</a>
-  <a href="code.html">Code</a>
-  <a href="art.html">Art</a>
-  <a href="soccer.html">Sports</a>
-  <a href="contact.html">Contact</a>
-</div>
+<body
+  style="background-image: url('Pics/blue-gradient.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
 
-<div class="container" style="opacity: .7;">
-  <div class="wheel" id="wheel">
-    <!-- Add images dynamically using JavaScript -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="newsNEW.html">News</a>
+    <a href="gameNEW.html">Games</a>
+    <a href="code.html">Code</a>
+    <a href="art.html">Art</a>
+    <a href="soccer.html">Sports</a>
+    <a href="contact.html">Contact</a>
   </div>
-      <input type="range" min="0" max="360" value="0" id="rotationRange">
-</div>
 
-<script>
-  const wheel = document.getElementById('wheel');
-  const rotationRange = document.getElementById('rotationRange');
+  <div class="container" style="opacity: .7;">
+    <div class="wheel" id="wheel">
+      <!-- Add images dynamically using JavaScript -->
+    </div>
+    <input type="range" min="0" max="360" value="0" id="rotationRange">
+  </div>
 
-  const numImages = 23;
-  const imagePath = 'Pics/ArtPage/art';
-  const imageExtension = '.png';
+  <script>
+    const wheel = document.getElementById('wheel');
+    const rotationRange = document.getElementById('rotationRange');
 
-  // Define radius
-  const radius = 700;
-  const anglePerImage = 360 / numImages;
+    const numImages = 23;
+    const imagePath = 'Pics/ArtPage/art';
+    const imageExtension = '.png';
 
-  // Create and append images to the wheel
-  for (let i = 1; i <= numImages; i++) {
-    const img = document.createElement('img');
-    img.src = `${imagePath}${i}${imageExtension}`;
-    img.style.transform = `rotateY(${anglePerImage * (i - 1)}deg) translateZ(${radius}px)`;
-    wheel.appendChild(img);
-  }
+    // Define radius
+    const radius = 700;
+    const anglePerImage = 360 / numImages;
 
-  // Update wheel rotation based on scrollbar input
-  rotationRange.addEventListener('input', () => {
-    let rotationValue = rotationRange.value;
+    // Create and append images to the wheel
+    for (let i = 1; i <= numImages; i++) {
+      const img = document.createElement('img');
+      img.src = `${imagePath}${i}${imageExtension}`;
+      img.style.transform = `rotateY(${anglePerImage * (i - 1)}deg) translateZ(${radius}px)`;
+      wheel.appendChild(img);
+    }
 
-    // Snap to the nearest image
-    const snappedRotation = Math.round(rotationValue / anglePerImage) * anglePerImage;
-    wheel.style.transform = `rotateY(${snappedRotation}deg)`;
-  });
-</script>
+    // Update wheel rotation based on scrollbar input
+    rotationRange.addEventListener('input', () => {
+      let rotationValue = rotationRange.value;
+
+      // Snap to the nearest image
+      const snappedRotation = Math.round(rotationValue / anglePerImage) * anglePerImage;
+      wheel.style.transform = `rotateY(${snappedRotation}deg)`;
+    });
+  </script>
 
 </body>
 

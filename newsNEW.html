@@ -16,121 +16,279 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title> SEB'S WEBSITE </title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #80acff;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #23a765;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 7.5%;
+            left: 0;
+            z-index: 1000;
+            border-bottom: 2px solid rgb(255, 255, 255);
+        }
+
+        /* Links inside the navbar */
+        .navbar a {
+            float: left;
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 25px 16px;
+            text-decoration: none;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            white-space: nowrap;
+            /* prevents links from breaking */
+        }
+
+        /* Change background on mouse-over */
+        .navbar a:hover {
+            border-top: 2mm ridge rgb(61, 173, 130);
+            background: #3498db;
+            color: rgb(255, 255, 255);
+        }
+
+        .page-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            background-color: #80acff;
+        }
+
+        .newslist {
+            border: 2px solid black;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: 80vw;
+            min-width: 500px;
+            background-color: #ffffff;
+            color: rgb(255, 255, 255);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .news {
+            border: 2px solid rgb(32, 185, 65);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+            text-align: center;
+            overflow: hidden;
+            width: 800px;
+            min-width: 200px;
+            height: 400px;
+            margin: 20px;
+            border-radius: 10px;
+            position: relative;
+            color: black;
+            background-color: white;
+            z-index: 1;
+        }
+
+        .news img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-top: 30px;
+        }
+
+        .news::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url('Pics/green-mail.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: .5;
+            z-index: 0;
+            border-radius: 10px;
+        }
+
+        .news h2,
+        .news p {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 768px) {
+
+            .navbar {
+                height: auto;
+            }
+
+            .navbar a {
+                padding: 12px 8px;
+                font-size: 14px;
+                float: none;
+                display: inline-block;
+                white-space: normal;
+            }
+
+            .newslist {
+                width: 95vw;
+                min-width: unset;
+            }
+
+            .news {
+                width: 90%;
+                height: auto;
+                padding-bottom: 20px;
+            }
+
+            .news img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .news p {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+    </style>
 </head>
 
 <br><br><br><br><br>
 
 <body>
 
-<!--Newest post--> <!--href="NEWS_URL"  (could be used to link a site through the title)-->
-<div class="page-wrapper">
+    <!--Newest post--> <!--href="NEWS_URL"  (could be used to link a site through the title)-->
+    <div class="page-wrapper">
 
-    <div class="newslist">
+        <div class="newslist">
 
-        <div style="margin-top: 100px;">
-            <h1 style="color: rgb(0, 0, 0);">NEWS</h1>
-        </div>
+            <div style="margin-top: 100px;">
+                <h1 style="color: rgb(0, 0, 0);">NEWS</h1>
+            </div>
 
-        <div class="news">
-            <img src="Pics/DE.png" alt="Image 2" style="margin-top: 30px;">
-            <h2><a href="NEWS_URL" style="color: #0066cc; text-decoration: none;">Hired by Dolphin Enterprises</a></h2>
-            <p>Date: June 3rd, 2024</p>
-            <p style="margin-left: 50px; margin-right: 50px;">
-                Attended the NAB Show in Las Vegas, exploring the latest advancements in tech and
-                virtual production. Got hands-on with cutting-edge tools in Unreal Engine, motion
-                capture, and LED wall technology while connecting with industry professionals pushing
-                the boundaries of immersive media. Exciting takeaways on the future of real-time
-                rendering and AI-driven production workflows!
-            </p>
-        </div>
+            <div class="news">
+                <img src="Pics/DE.png" alt="Image 2" style="margin-top: 30px;">
+                <h2><a href="NEWS_URL" style="color: #0066cc; text-decoration: none;">Hired by Dolphin Enterprises</a>
+                </h2>
+                <p><b>Date: June 3rd, 2024</b></p>
+                <p style="margin-left: 50px; margin-right: 50px;">
+                    Attended the NAB Show in Las Vegas, exploring the latest advancements in tech and
+                    virtual production. Got hands-on with cutting-edge tools in Unreal Engine, motion
+                    capture, and LED wall technology while connecting with industry professionals pushing
+                    the boundaries of immersive media. Exciting takeaways on the future of real-time
+                    rendering and AI-driven production workflows!
+                </p>
+            </div>
 
-        <div class="news">
-            <img src="Pics/NAB.jpg" alt="Image 2" style="margin-top: 30px;">
-            <h2><a href="NEWS_URL" style="color: #0066cc; text-decoration: none;">NAB Conference</a></h2>
-            <p>Date: April 15th, 2024</p>
-            <p style="margin-left: 50px; margin-right: 50px;">
-                Attended the NAB Show in Las Vegas, exploring the latest advancements in tech and
-                virtual production. Got hands-on with cutting-edge tools in Unreal Engine, motion
-                capture, and LED wall technology while connecting with industry professionals pushing
-                the boundaries of immersive media. Exciting takeaways on the future of real-time
-                rendering and AI-driven production workflows!
-            </p>
-        </div>
+            <div class="news">
+                <img src="Pics/NAB.jpg" alt="Image 2" style="margin-top: 30px;">
+                <h2><a href="NEWS_URL" style="color: #0066cc; text-decoration: none;">NAB Conference</a></h2>
+                <p><b>Date: April 15th, 2024</b></p>
+                <p style="margin-left: 50px; margin-right: 50px;">
+                    Attended the NAB Show in Las Vegas, exploring the latest advancements in tech and
+                    virtual production. Got hands-on with cutting-edge tools in Unreal Engine, motion
+                    capture, and LED wall technology while connecting with industry professionals pushing
+                    the boundaries of immersive media. Exciting takeaways on the future of real-time
+                    rendering and AI-driven production workflows!
+                </p>
+            </div>
 
-        <div class="news">
-            <img src="Pics/upgrade.png" alt="Image 2" style="margin-top: 30px;">
-            <h2><a href="NEWS_URL" style="color: #0066cc; text-decoration: none;">Upgraded Website</a></h2>
-            <p>Date: Feb 2nd, 2024</p>
-            <p style="margin-left: 50px; margin-right: 50px;">
-                I have completely re-done my website from top to bottom.
-                This better showcases my skillset with front end development and all my projects.
-            </p>
-        </div>
+            <div class="news">
+                <img src="Pics/upgrade.png" alt="Image 2" style="margin-top: 30px;">
+                <h2><a href="NEWS_URL" style="color: #0066cc; text-decoration: none;">Upgraded Website</a></h2>
+                <p><b>Date: Feb 2nd, 2024</b></p>
+                <p style="margin-left: 50px; margin-right: 50px;">
+                    I have completely re-done my website from top to bottom.
+                    This better showcases my skillset with front end development and all my projects.
+                </p>
+            </div>
 
-        <div class="news">
-            <img src="Pics/nat.jpg" alt="Image 1" style="margin-top: 30px; ">
-            <h2><a href="https://www.rexcoxmenswear.com/" style="color: #0066cc; text-decoration: none;">Modelling for Natsukashii</a></h2>
-            <p>Date: Dec 18th, 2023</p>
-            <p style="margin-left: 50px; margin-right: 50px;">
-                Wearing different attire from Natsukashii's clothing line
-                and allowing them to use these photos for their advertisements. I highly recommend their clothing and would
-                encourage anyone to check out their online store.
-            </p>
-        </div>
+            <div class="news">
+                <img src="Pics/nat.jpg" alt="Image 1" style="margin-top: 30px; ">
+                <h2><a href="https://www.rexcoxmenswear.com/" style="color: #0066cc; text-decoration: none;">Modelling
+                        for Natsukashii</a></h2>
+                <p><b>Date: Dec 18th, 2023</b></p>
+                <p style="margin-left: 50px; margin-right: 50px;">
+                    Wearing different attire from Natsukashii's clothing line
+                    and allowing them to use these photos for their advertisements. I highly recommend their clothing
+                    and would
+                    encourage anyone to check out their online store.
+                </p>
+            </div>
 
-        <div class="news">
-            <img src="Pics/RexCox.png" alt="Image 1" style="margin-top: 30px; width: 260px;">
-            <h2><a href="https://www.rexcoxmenswear.com/" style="color: #0066cc; text-decoration: none;">Photoshoot for Rex Cox Men's Wear</a></h2>
-            <p>Date: Dec 10th, 2023</p>
-            <p style="margin-left: 50px; margin-right: 50px;">
-                Posing in suits and jackets for photos to be used within
-                Rex Cox Men's Wear's promotional material. This was a great experience, and feel free to check out the store
-                for both formal and informal men's attire.
-            </p>
-        </div>
+            <div class="news">
+                <img src="Pics/RexCox.png" alt="Image 1" style="margin-top: 30px; width: 260px;">
+                <h2><a href="https://www.rexcoxmenswear.com/" style="color: #0066cc; text-decoration: none;">Photoshoot
+                        for Rex Cox Men's Wear</a></h2>
+                <p><b>Date: Dec 10th, 2023</b></p>
+                <p style="margin-left: 50px; margin-right: 50px;">
+                    Posing in suits and jackets for photos to be used within
+                    Rex Cox Men's Wear's promotional material. This was a great experience, and feel free to check out
+                    the store
+                    for both formal and informal men's attire.
+                </p>
+            </div>
 
-        <div class="news">
-            <img src="Pics/shoreline.png" alt="Image 1" style="margin-top: 30px;">
-            <h2><a href="https://www.shoreline-studios.com/" style="color: #0066cc; text-decoration: none;">Working with Shoreline Studios</a></h2>
-            <p>Date: May 15th, 2023</p>
-            <p style="margin-left: 50px; margin-right: 50px;">
-                Aiding as a Virtual Production Assistant with the
-                creation of their new virtual production studio. Incorporates UE5 virtual environments, Black Magic
-                hardware/software, Ultimatte software, and Bliss Nodal Offset to output realistic environments
-                surrounding the actor. Used for livestreaming and filmmaking. This has been leading up to
-                accumulating enough clientele so that a steady flow of work can be achieved. If you are interested
-                in utilizing a virtual production studio, greenscreen, or even basic studio space, feel free to
-                click the title above to travel to Shoreline's page.
-            </p>
-        </div>
+            <div class="news">
+                <img src="Pics/shoreline.png" alt="Image 1" style="margin-top: 30px;">
+                <h2><a href="https://www.shoreline-studios.com/" style="color: #0066cc; text-decoration: none;">Working
+                        with Shoreline Studios</a></h2>
+                <p><b>Date: May 15th, 2023</b></p>
+                <p style="margin-left: 50px; margin-right: 50px;">
+                    Aiding as a Virtual Production Assistant with the
+                    creation of their new virtual production studio. Incorporates UE5 virtual environments, Black Magic
+                    hardware/software, Ultimatte software, and Bliss Nodal Offset to output realistic environments
+                    surrounding the actor. Used for livestreaming and filmmaking. This has been leading up to
+                    accumulating enough clientele so that a steady flow of work can be achieved. If you are interested
+                    in utilizing a virtual production studio, greenscreen, or even basic studio space, feel free to
+                    click the title above to travel to Shoreline's page.
+                </p>
+            </div>
 
-        <div class="news">
-            <img src="Pics/website.png" alt="Image 2" style="margin-top: 30px;">
-            <h2><a href="NEWS_URL" style="color: #0066cc; text-decoration: none;">Initial Website Launch</a></h2>
-            <p>Date: February 27th, 2023</p>
-            <p style="margin-left: 50px; margin-right: 50px;">
-                The website has finally been made public! It is a way
-                to showcase my coding skills and give a more in-depth understanding of who I am. This website is made
-                with the intention of building relationships with employers and employees who would be interested in
-                my background. The website was coded by myself and is hosted using Github, where all the code is public
-                to read.
-            </p>
-        </div>
+            <div class="news">
+                <img src="Pics/website.png" alt="Image 2" style="margin-top: 30px;">
+                <h2><a href="NEWS_URL" style="color: #0066cc; text-decoration: none;">Initial Website Launch</a></h2>
+                <p><b>Date: February 27th, 2023</b></p>
+                <p style="margin-left: 50px; margin-right: 50px;">
+                    The website has finally been made public! It is a way
+                    to showcase my coding skills and give a more in-depth understanding of who I am. This website is
+                    made
+                    with the intention of building relationships with employers and employees who would be interested in
+                    my background. The website was coded by myself and is hosted using Github, where all the code is
+                    public
+                    to read.
+                </p>
+            </div>
 
-        <div class="news">
-            <img src="Pics/Western.png" alt="Image 3" style="margin-top: 30px;">
-            <h2><a href="NEWS_URL" style="color: #0066cc; text-decoration: none;">Graduated!</a></h2>
-            <p>Date: June 14th, 2022</p>
-            <p style="margin-left: 50px; margin-right: 50px;">
-                After four years of five or more courses per semester,
-                Sebastien Godbout graduated from Western University of Ontario with a Bachelor of Science. More
-                specifically, an Honors Specialization in Computer Science and a Minor in Game Development.
-            </p>
+            <div class="news">
+                <img src="Pics/Western.png" alt="Image 3" style="margin-top: 30px;">
+                <h2><a href="NEWS_URL" style="color: #0066cc; text-decoration: none;">Graduated!</a></h2>
+                <p><b>Date: June 14th, 2022</b></p>
+                <p style="margin-left: 50px; margin-right: 50px;">
+                    After four years of five or more courses per semester,
+                    Sebastien Godbout graduated from Western University of Ontario with a Bachelor of Science. More
+                    specifically, an Honors Specialization in Computer Science and a Minor in Game Development.
+                </p>
+            </div>
+
         </div>
 
     </div>
-
-</div>
 
 
 </body>

@@ -3,203 +3,447 @@
 <html>
 
 <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="newsNEW.html">News</a>
-    <a href="gameNEW.html">Games</a>
-    <a href="code.html">Code</a>
-    <a href="art.html">Art</a>
-    <a href="soccer.html">Sports</a>
-    <a href="contact.html">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="newsNEW.html">News</a>
+  <a href="gameNEW.html">Games</a>
+  <a href="code.html">Code</a>
+  <a href="art.html">Art</a>
+  <a href="soccer.html">Sports</a>
+  <a href="contact.html">Contact</a>
 </div>
 
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> SEB'S WEBSITE </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> SEB'S WEBSITE </title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #23a765;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 7.5%;
+      left: 0;
+      z-index: 1000;
+      border-bottom: 2px solid rgb(255, 255, 255);
+    }
+
+    /* Links inside the navbar */
+    .navbar a {
+      float: left;
+      display: block;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      padding: 25px 16px;
+      text-decoration: none;
+      font-family: 'Times New Roman', Times, serif, sans-serif;
+      white-space: nowrap;
+      /* prevents links from breaking */
+    }
+
+    /* Change background on mouse-over */
+    .navbar a:hover {
+      border-top: 2mm ridge rgb(61, 173, 130);
+      background: #3498db;
+      color: rgb(255, 255, 255);
+    }
+
+    .game-section {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-image: url('Pics/blue-background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .game-box {
+      display: flex;
+      background-color: rgba(0, 128, 0, 0.6);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+      color: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .game-photo {
+      flex: 1 1 300px;
+      padding: 10px;
+    }
+
+    .game-photo img {
+      border: 2px solid rgb(6, 109, 28);
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .info {
+      flex: 2 1 300px;
+      padding: 10px;
+    }
+
+    .button {
+      padding: 10px;
+      background-color: white;
+      color: green;
+      border: 2px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .button:hover {
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 1);
+      background-color: white;
+      color: black;
+    }
+
+    .side-container {
+      margin-top: 50px;
+      position: fixed;
+      top: 0;
+      right: -450px;
+      width: 30%;
+      max-width: 400px;
+      height: 100%;
+      background-color: #83d1f5;
+      overflow-y: auto;
+      padding: 20px;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 1);
+      z-index: 1;
+      transition: right 0.3s;
+    }
+
+    .side-container.show {
+      right: 0;
+    }
+
+    .photo-grid {
+      border-radius: 8px;
+      background-color: #000000;
+      border: 5px solid rgb(0, 0, 0);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .photo-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      height: 150px;
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .play-button {
+      margin-left: 100px;
+      width: 200px;
+      height: 100px;
+      padding: 10px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      margin-top: 20px;
+    }
+
+    .play-button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 768px) {
+
+      .navbar {
+        height: auto;
+      }
+
+      .navbar a {
+        padding: 12px 8px;
+        font-size: 14px;
+        float: none;
+        display: inline-block;
+        white-space: normal;
+      }
+
+      .game-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .game-photo,
+      .info {
+        flex: 1 1 100%;
+        padding: 10px;
+      }
+
+      .side-container {
+        width: 90%;
+        max-width: none;
+        right: -100%;
+      }
+
+      .side-container.show {
+        right: 0;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .play-button {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <div class="game-section">
 
-  <div class="game-box" data-container-id="container1" style="margin-top: 80px;">
+    <div class="game-box" data-container-id="container1" style="margin-top: 80px;">
       <div class="game-photo">
-          <img src="Pics/Dungeon.png" alt="Your Photo">
+        <img src="Pics/Dungeon.png" alt="Your Photo">
       </div>
       <div class="info">
         <h1>DUNGEON CRAWLER</h1>
-          <p>Defeat different enemy types by dodging and shooting. Can you reach the boss at the end? <br>
-            It is said to have two phases!</p>
-          <!-- href="javascript:void(0)" to prevent scrolling -->
-          <a href="javascript:void(0)" class="button" onclick="toggleContainer('container1')">Learn More<br>and Play</a>
+        <p>Defeat different enemy types by dodging and shooting. Can you reach the boss at the end? <br>
+          It is said to have two phases!</p>
+        <!-- href="javascript:void(0)" to prevent scrolling -->
+        <a href="javascript:void(0)" class="button" onclick="toggleContainer('container1')">Learn More<br>and Play</a>
       </div>
-  </div>
-  
-  <div class="game-box" data-container-id="container2">
+    </div>
+
+    <div class="game-box" data-container-id="container2">
       <div class="game-photo">
-          <img src="Pics/Uber.png" alt="Your Photo">
+        <img src="Pics/Uber.png" alt="Your Photo">
       </div>
       <div class="info">
         <h1>SUPER OOBER ZOOMER</h1>
-          <p>How many wacky characters can you successfully pickup and drop off before the timer runs <br>
-            out in this chaotic uber simulator!</p>
-          <a href="javascript:void(0)" class="button" onclick="toggleContainer('container2')">Learn More<br>and Play</a>
+        <p>How many wacky characters can you successfully pickup and drop off before the timer runs <br>
+          out in this chaotic uber simulator!</p>
+        <a href="javascript:void(0)" class="button" onclick="toggleContainer('container2')">Learn More<br>and Play</a>
       </div>
-  </div>
-  
-  <div class="game-box" data-container-id="container3">
+    </div>
+
+    <div class="game-box" data-container-id="container3">
       <div class="game-photo">
-          <img src="Pics/demo.png" alt="Your Photo">
+        <img src="Pics/demo.png" alt="Your Photo">
       </div>
       <div class="info">
         <h1>BLOCK BLAST</h1>
-          <p>Dodge bricks as they relentlessly increase in speed. Rack up your score and see how far you <br>
-            can get!</p>
-          <a href="javascript:void(0)" class="button" onclick="toggleContainer('container3')">Learn More<br>and Play</a>
+        <p>Dodge bricks as they relentlessly increase in speed. Rack up your score and see how far you <br>
+          can get!</p>
+        <a href="javascript:void(0)" class="button" onclick="toggleContainer('container3')">Learn More<br>and Play</a>
       </div>
-  </div>
-  
-  <div class="game-box" data-container-id="container4">
+    </div>
+
+    <div class="game-box" data-container-id="container4">
       <div class="game-photo">
-          <img src="Pics/Maze.png" alt="Your Photo">
+        <img src="Pics/Maze.png" alt="Your Photo">
       </div>
       <div class="info">
         <h1>MAZE GAME</h1>
-          <p>Zoom around the maze and collect keys as fast as you can to navigate your way to the exit.</p>
-          <a href="javascript:void(0)" class="button" onclick="toggleContainer('container4')">Learn More<br>and Play</a>
+        <p>Zoom around the maze and collect keys as fast as you can to navigate your way to the exit.</p>
+        <a href="javascript:void(0)" class="button" onclick="toggleContainer('container4')">Learn More<br>and Play</a>
       </div>
-  </div>
-  
-
-
-<!-- Side Containers----------------------------------------------------->
-  <div class="side-container" id="container1">
-    <h1>DUNGEON CRAWLER</h1>
-    <br>
-
-      <!-- Container for photos and play button -->
-    <div class="photo-grid">
-        <div class="photo-item">
-            <img src="Pics/Dungeon1.png" alt="Photo 1">
-        </div>
-        <div class="photo-item">
-            <img src="Pics/Dungeon2.png" alt="Photo 2">
-        </div>
-        <div class="photo-item">
-            <img src="Pics/Dungeon3.png" alt="Photo 3">
-        </div>
-        <div class="photo-item">
-            <img src="Pics/Dungeon4.png" alt="Photo 4">
-        </div>
     </div>
 
-    <a href="Dungeon/index.html">
-    <!-- Play button -->
-      <button class="play-button"><h1>Play</h1></button>
-    </a>
 
-  </div>
-  
-  <div class="side-container" id="container2">
-    <h1>SUPER OOBER ZOOMER</h1>
-    <br>
 
-        <!-- Container for photos and play button -->
-    <div class="photo-grid">
-      <div class="photo-item">
+    <!-- Side Containers----------------------------------------------------->
+    <div class="side-container" id="container1">
+      <h1>DUNGEON CRAWLER</h1>
+      <br>
+
+      <!-- Container for photos and play button -->
+      <div class="photo-grid">
+        <div class="photo-item">
+          <img src="Pics/Dungeon1.png" alt="Photo 1">
+        </div>
+        <div class="photo-item">
+          <img src="Pics/Dungeon2.png" alt="Photo 2">
+        </div>
+        <div class="photo-item">
+          <img src="Pics/Dungeon3.png" alt="Photo 3">
+        </div>
+        <div class="photo-item">
+          <img src="Pics/Dungeon4.png" alt="Photo 4">
+        </div>
+      </div>
+
+      <a href="Dungeon/index.html">
+        <!-- Play button -->
+        <button class="play-button">
+          <h1>Play</h1>
+        </button>
+      </a>
+
+      <button class="play-button" onclick="closeContainer('container1')">
+        <h1>Close</h1>
+      </button>
+
+    </div>
+
+    <div class="side-container" id="container2">
+      <h1>SUPER OOBER ZOOMER</h1>
+      <br>
+
+      <!-- Container for photos and play button -->
+      <div class="photo-grid">
+        <div class="photo-item">
           <img src="Pics/Uber1.png" alt="Photo 1">
-      </div>
-      <div class="photo-item">
+        </div>
+        <div class="photo-item">
           <img src="Pics/Uber2.png" alt="Photo 2">
-      </div>
-      <div class="photo-item">
+        </div>
+        <div class="photo-item">
           <img src="Pics/Uber3.png" alt="Photo 3">
-      </div>
-      <div class="photo-item">
+        </div>
+        <div class="photo-item">
           <img src="Pics/Uber4.png" alt="Photo 4">
+        </div>
       </div>
-  </div>
 
-  <a href="SuperOoberZoomer/index.html">
-  <!-- Play button -->
-    <button class="play-button"><h1>Play</h1></button>
-  </a>
+      <a href="SuperOoberZoomer/index.html">
+        <!-- Play button -->
+        <button class="play-button">
+          <h1>Play</h1>
+        </button>
+      </a>
 
-  </div>
-  
-  <div class="side-container" id="container3">
-    <h1>BLOCK BLAST</h1>
-    <br>
+      <button class="play-button" onclick="closeContainer('container2')">
+        <h1>Close</h1>
+      </button>
 
-        <!-- Container for photos and play button -->
-    <div class="photo-grid">
-      <div class="photo-item">
+    </div>
+
+    <div class="side-container" id="container3">
+      <h1>BLOCK BLAST</h1>
+      <br>
+
+      <!-- Container for photos and play button -->
+      <div class="photo-grid">
+        <div class="photo-item">
           <img src="Pics/demo1.png" alt="Photo 1">
-      </div>
-      <div class="photo-item">
+        </div>
+        <div class="photo-item">
           <img src="Pics/demo2.png" alt="Photo 2">
-      </div>
-      <div class="photo-item">
+        </div>
+        <div class="photo-item">
           <img src="Pics/demo3.png" alt="Photo 3">
-      </div>
-      <div class="photo-item">
+        </div>
+        <div class="photo-item">
           <img src="Pics/demo4.png" alt="Photo 4">
+        </div>
       </div>
-  </div>
 
-  <a href="Demo/index.html">
-  <!-- Play button -->
-    <button class="play-button"><h1>Play</h1></button>
-  </a>
+      <a href="Demo/index.html">
+        <!-- Play button -->
+        <button class="play-button">
+          <h1>Play</h1>
+        </button>
+      </a>
 
-  </div>
-  
-  <div class="side-container" id="container4">
-    <h1>MAZE GAME</h1>
-    <br>
+      <button class="play-button" onclick="closeContainer('container3')">
+        <h1>Close</h1>
+      </button>
 
-        <!-- Container for photos and play button -->
-    <div class="photo-grid">
-      <div class="photo-item">
+    </div>
+
+    <div class="side-container" id="container4">
+      <h1>MAZE GAME</h1>
+      <br>
+
+      <!-- Container for photos and play button -->
+      <div class="photo-grid">
+        <div class="photo-item">
           <img src="Pics/Maze1.png" alt="Photo 1">
-      </div>
-      <div class="photo-item">
+        </div>
+        <div class="photo-item">
           <img src="Pics/Maze2.png" alt="Photo 2">
-      </div>
-      <div class="photo-item">
+        </div>
+        <div class="photo-item">
           <img src="Pics/Maze3.png" alt="Photo 3">
-      </div>
-      <div class="photo-item">
+        </div>
+        <div class="photo-item">
           <img src="Pics/Maze4.png" alt="Photo 4">
+        </div>
       </div>
-  </div>
 
-  <a href="Maze/index.html">
-  <!-- Play button -->
-    <button class="play-button"><h1>Play</h1></button>
-  </a>
+      <a href="Maze/index.html">
+        <!-- Play button -->
+        <button class="play-button">
+          <h1>Play</h1>
+        </button>
+      </a>
 
-  </div>
-  
-  <script>
+      <button class="play-button" onclick="closeContainer('container4')">
+        <h1>Close</h1>
+      </button>
+
+    </div>
+
+    <script>
       function toggleContainer(containerId) {
-          // Get the clicked container
-          var container = document.getElementById(containerId);
-          
-          // Get all side containers
-          var allContainers = document.querySelectorAll('.side-container');
-  
-          // Loop through all side containers and hide them
-          allContainers.forEach(function (currentContainer) {
-              if (currentContainer.id !== containerId) {
-                  currentContainer.classList.remove('show');
-              }
-          });
-  
-          // Toggle the clicked container
-          container.classList.toggle('show');
+        // Get the clicked container
+        var container = document.getElementById(containerId);
+
+        // Get all side containers
+        var allContainers = document.querySelectorAll('.side-container');
+
+        // Loop through all side containers and hide them
+        allContainers.forEach(function (currentContainer) {
+          if (currentContainer.id !== containerId) {
+            currentContainer.classList.remove('show');
+          }
+        });
+
+        // Toggle the clicked container
+        container.classList.toggle('show');
       }
-  </script>
+
+      function closeContainer(containerId) {
+        const container = document.getElementById(containerId);
+        container.classList.remove('show');
+      }
+    </script>
 
   </div>
 </body>
+
 </html>

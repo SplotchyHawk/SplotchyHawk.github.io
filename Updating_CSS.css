@@ -5,7 +5,8 @@
     border-radius: 1000px;
     padding: 10px;
     max-width: 50px;
-    margin-right: 20px; /* Adjust the margin as needed */
+    margin-right: 20px;
+    /* Adjust the margin as needed */
 }
 
 .speech-bubble::before {
@@ -14,7 +15,8 @@
     top: 50%;
     right: 100%;
     border: solid transparent;
-    border-right-color: white; /* Point to the left */
+    border-right-color: white;
+    /* Point to the left */
     border-width: 20px;
     margin-top: -20px;
     border-bottom-color: transparent;
@@ -27,7 +29,8 @@
     justify-content: space-between;
     width: 100%;
     min-width: 800px;
-    background: url('Pics/green-background.jpg') center/cover no-repeat; /* Add the path to your image */
+    background: url('Pics/green-background.jpg') center/cover no-repeat;
+    /* Add the path to your image */
     color: rgb(255, 255, 255);
     box-shadow: 0 0 10px rgba(0, 0, 0, 100);
 }
@@ -39,7 +42,7 @@
 
 .title-image {
     margin-left: 35%;
-  }
+}
 
 .title-image img {
     border: 2px solid lightblue;
@@ -92,7 +95,7 @@
     margin: 0;
 }
 
-.second-section-text{
+.second-section-text {
     border: 2px solid #3498db;
 
 }
@@ -108,15 +111,16 @@
     display: flex;
     flex-direction: column;
     margin-right: 20px;
-    
+
     position: relative;
     padding: 10px 20px;
     background-color: #77a877;
     color: #ffffff;
     border: none;
     outline: none;
-    
-    border-radius: 10px; /* Adjust the value for the desired amount of curvature */
+
+    border-radius: 10px;
+    /* Adjust the value for the desired amount of curvature */
 }
 
 .custom-buttons button {
@@ -128,11 +132,12 @@
     content: '';
     position: absolute;
     top: 0;
-    right: -10px; /* Adjust this value based on your design */
+    right: -10px;
+    /* Adjust this value based on your design */
     border-width: 20px 0 20px 20px;
     border-style: solid;
     border-color: transparent transparent transparent #77a877;
-  }
+}
 
 .custom-section {
     display: none;
@@ -147,21 +152,24 @@
     flex-grow: 1;
 }
 
-.blue-back{
+.blue-back {
     box-shadow: 0 0 10px rgba(0, 0, 0, .7);
     width: 700px;
     height: 500px;
     border-radius: 10px;
-    background: url('Pics/blue-background.jpg') center/cover no-repeat; /* Add the path to your image */
+    background: url('Pics/blue-background.jpg') center/cover no-repeat;
+    /* Add the path to your image */
     border: 2px solid #b2cfe2
 }
 
 .skill {
-    background-color: #77a877; 
+    background-color: #77a877;
     padding: 5px 10px;
-    margin-bottom: 4px; /* Space between each skill */
+    margin-bottom: 4px;
+    /* Space between each skill */
     display: inline-block;
-    border-radius: 10px; /* Rounded corners for each skill */
+    border-radius: 10px;
+    /* Rounded corners for each skill */
 }
 
 .third-section {
@@ -185,8 +193,10 @@
     width: 100%;
     height: 100%;
     background: url('Pics/green-background.jpg') center/cover no-repeat;
-    transform: scaleY(-1); /* Flip on the y-axis */
-    z-index: -1; /* Place the pseudo-element behind the content */
+    transform: scaleY(-1);
+    /* Flip on the y-axis */
+    z-index: -1;
+    /* Place the pseudo-element behind the content */
 }
 
 .experience {
@@ -201,22 +211,26 @@
     border-radius: 10px;
     position: relative;
     color: black;
-  }
+}
 
-  .experience::before {
+.experience::before {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: url('Pics/blue-background.jpg') center/cover no-repeat; /* Add the path to your image */
-    opacity: 0.3; /* Set the desired opacity (0.5 for 50%) */
-    z-index: -1; /* Place the overlay behind the content */
-    border-radius: 10px; /* Match the border radius of the container */
-  }
+    background: url('Pics/blue-background.jpg') center/cover no-repeat;
+    /* Add the path to your image */
+    opacity: 0.3;
+    /* Set the desired opacity (0.5 for 50%) */
+    z-index: -1;
+    /* Place the overlay behind the content */
+    border-radius: 10px;
+    /* Match the border radius of the container */
+}
 
-  .experienceNEW {
+.experienceNEW {
     text-align: center;
     position: relative;
     overflow: auto;
@@ -228,9 +242,9 @@
     border-radius: 10px;
     position: relative;
     color: black;
-  }
+}
 
-  .experienceNEW::before {
+.experienceNEW::before {
     content: "";
     position: absolute;
     top: 0;
@@ -238,157 +252,160 @@
     bottom: 0;
     left: 0;
     background: url('Pics/blue-background.jpg') center/cover no-repeat;
-    opacity: 0.5; /* Set the desired opacity (0.5 for 50%) */
-    z-index: -1; /* Place the overlay behind the content */
-    border-radius: 10px; /* Match the border radius of the container */
-  }
+    opacity: 0.5;
+    /* Set the desired opacity (0.5 for 50%) */
+    z-index: -1;
+    /* Place the overlay behind the content */
+    border-radius: 10px;
+    /* Match the border radius of the container */
+}
 
-  .desc-img {
+.desc-img {
     margin-left: 100px;
-    }
+}
 
-    .blue-back-holding{
-        width: 50%; 
-        height: 500px; 
-        min-width: 850px;
-    }
+.blue-back-holding {
+    width: 50%;
+    height: 500px;
+    min-width: 850px;
+}
 
-    .buffer {
-        display: none; 
-      }
-      
-
+.buffer {
+    display: none;
+}
 
 
 
 
-  @media (max-width: 768px) {
+
+
+@media (max-width: 768px) {
     html {
-      font-size: 12px;
+        font-size: 12px;
     }
-  
+
     body {
-      overflow-x: hidden;
-      margin: 0;
-      padding: 0;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
     }
 
     .buffer {
         display: block;
-        height: 40px; 
-      }
-  
+        height: 40px;
+    }
+
     .double-section {
-      width: 100%;
-      padding: 20px;
-      box-sizing: border-box;
-      transform: none;
-      margin-bottom: 40px;
-      display: flex;              
-      flex-wrap: nowrap;          
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 10px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        transform: none;
+        margin-bottom: 40px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
     }
-  
+
     .title-image {
-      margin-left: 5%;
-      flex: 0 0 auto;
+        margin-left: 5%;
+        flex: 0 0 auto;
     }
-  
+
     .title-image img {
         width: 200px;
         height: 400px;
     }
-  
+
     .title-content {
-      margin: 0;
-      flex: 1 1 auto;
-      min-width: 0;               
-      text-align: left;
+        margin: 0;
+        flex: 1 1 auto;
+        min-width: 0;
+        text-align: left;
     }
-  
+
     .second-section {
-      transform: scale(0.8);
-      transform-origin: top center;
-      padding: 10px 10px;
-      margin-top: 40px;
-      margin-bottom: 40px;
+        transform: scale(0.8);
+        transform-origin: top center;
+        padding: 10px 10px;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
-  
+
     .custom-section-container {
-      transform: scale(0.6);
-      transform-origin: top center;
-      margin-bottom: 30px;
-      margin-top: -200px;
+        transform: scale(0.6);
+        transform-origin: top center;
+        margin-bottom: 30px;
+        margin-top: -200px;
     }
-  
+
     .title-content,
     .custom-section-container,
     .experience,
     .experienceNEW,
     .speech-bubble {
-      max-width: 100%;
-      width: auto;
+        max-width: 100%;
+        width: auto;
     }
-  
+
     .custom-buttons {
-      flex-direction: column;
-      align-items: center;
-      transform: scale(0.9);
-      margin-left: 100px;
+        flex-direction: column;
+        align-items: center;
+        transform: scale(0.9);
+        margin-left: 100px;
     }
-  
+
     .custom-buttons button {
-      margin-bottom: 6px;
-      font-size: 0.85em;
+        margin-bottom: 6px;
+        font-size: 0.85em;
     }
-  
+
     .contact-button,
     .contact-button2 {
-      font-size: 0.85em;
-      padding: 6px 12px;
+        font-size: 0.85em;
+        padding: 6px 12px;
     }
-  
+
     .speech-bubble {
-      padding: 6px;
-      max-width: 40px;
+        padding: 6px;
+        max-width: 40px;
     }
-  
+
     .speech-bubble::before {
-      border-width: 12px;
-      margin-top: -12px;
+        border-width: 12px;
+        margin-top: -12px;
     }
-  
+
     .experience,
     .experienceNEW {
-      font-size: 0.85em;
-      height: auto;
+        font-size: 0.85em;
+        height: auto;
     }
 
     .desc-img {
         margin-left: 10px;
     }
 
-    .blue-back{
+    .blue-back {
         width: 200px;
     }
 
-    .blue-back-holding{
-        width: 100px; 
-        height: 500px; 
+    .blue-back-holding {
+        width: 100px;
+        height: 500px;
     }
 
     .third-section {
         margin-top: -400px;
     }
-    
-  }
-  
-  
-  
-  
-  
+
+}
+
+
+
+
+
 
 /* News Page Containers -----------------------------------------------------*/
 
@@ -397,7 +414,8 @@
     justify-content: center;
     align-items: center;
     height: auto;
-    background-color: #ecf0f1; /* Set a background color for the page */
+    background-color: #ecf0f1;
+    /* Set a background color for the page */
     background-color: #80acff;
 }
 
@@ -405,22 +423,23 @@
     border: 2px solid black;
     overflow: auto;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto; 
-    width: 80vw; 
+    height: auto;
+    width: 80vw;
     min-width: 500px;
     background-color: #ffffff;
     color: rgb(255, 255, 255);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     position: relative;
 }
 
 .news img {
     width: 150px;
     height: 150px;
-    object-fit: cover; /* This property maintains the aspect ratio while covering the entire container */
+    object-fit: cover;
+    /* This property maintains the aspect ratio while covering the entire container */
 }
 
 /* Adjust the .news containers to have a fixed height */
@@ -428,10 +447,12 @@
     border: 2px solid rgb(32, 185, 65);
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     text-align: center;
-    overflow: hidden; /* Hide any content that overflows the container */
+    overflow: hidden;
+    /* Hide any content that overflows the container */
     width: 800px;
     min-width: 200px;
-    height: 400px; /* Adjust the height as needed */
+    height: 400px;
+    /* Adjust the height as needed */
     margin: 20px;
     border-radius: 10px;
     position: relative;
@@ -456,15 +477,19 @@
 
 /* Game Section code -----------------------------------------------------*/
 
-.game-section{
+.game-section {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    overflow-x: hidden; /* to hide horizontal scrollbar */
+    overflow-x: hidden;
+    /* to hide horizontal scrollbar */
     background-image: url('Pics/blue-background.jpg');
-    background-size: cover; /* Adjust as needed */
-    background-position: center; /* Adjust as needed */
-    background-attachment: fixed; /* Fixed background */
+    background-size: cover;
+    /* Adjust as needed */
+    background-position: center;
+    /* Adjust as needed */
+    background-attachment: fixed;
+    /* Fixed background */
 }
 
 .game-box {
@@ -516,7 +541,8 @@
     margin-top: 50px;
     position: fixed;
     top: 0;
-    right: -450px; /* initially hide the container off-screen */
+    right: -450px;
+    /* initially hide the container off-screen */
     width: 30%;
     max-width: 400px;
     height: 100%;
@@ -546,14 +572,15 @@
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-    height: 150px; 
+    height: 150px;
 }
 
 .photo-item img {
-    
+
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the container */
     border-radius: 8px;
 }
 
@@ -578,6 +605,7 @@
     background-color: white;
     color: black;
 }
+
 /* Code-Section code -----------------------------------------------------*/
 
 .code-section {
@@ -592,23 +620,30 @@
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 0 20px;
-    flex: 0 0 auto; /* Don't grow, don't shrink */
-    margin-right: 20px; /* Add margin between images and content */
+    flex: 0 0 auto;
+    /* Don't grow, don't shrink */
+    margin-right: 20px;
+    /* Add margin between images and content */
 }
 
 .code-images img {
     border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
-    width: 360px; /* Set the width of images */
-    height: 360px; /* Set the height of images */
-    object-fit: cover; /* Maintain aspect ratio and cover container */
+    width: 360px;
+    /* Set the width of images */
+    height: 360px;
+    /* Set the height of images */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover container */
 }
 
 .code-content {
     max-width: 1000px;
     min-width: 400px;
-    flex: 1; /* Grow to fill available space */
-    padding: 0 20px; /* Adjust padding as needed */
+    flex: 1;
+    /* Grow to fill available space */
+    padding: 0 20px;
+    /* Adjust padding as needed */
 }
 
 .code-download-button {
@@ -640,9 +675,9 @@
 .navbar {
     overflow: hidden;
     background-color: #23a765;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
+    position: fixed;
+    top: 0;
+    width: 100%;
     height: 7.5%;
     left: 0;
     z-index: 1000;
